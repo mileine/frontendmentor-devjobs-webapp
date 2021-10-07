@@ -1,0 +1,20 @@
+.footer-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -5px 5px rgb(68 68 68 / 10%);
+    font-size: small;
+}
+.heart {
+    color: #ff3333
+}
+.attribution {
+    padding: 5px 20px;
+}
+.status {
+    padding: 5px 20px;
+    &.wip {
+        background: #ff3333;
+        color: white;
+    }
+}
