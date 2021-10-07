@@ -1,6 +1,8 @@
 # Dev Jobs Web App 
 
-This is a challenge by [Frontend Mentor](https://www.frontendmentor.io).
+## A challenge by [Frontend Mentor](https://www.frontendmentor.io).
+
+![image](./preview.jpg)
 
 [View challenge description here](https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l/hub/github-jobs-api-YWchkJ-qN)
 
