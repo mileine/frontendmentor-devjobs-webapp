@@ -1,8 +1,11 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #F4F6F8;
+}
 .main-content {
     position: relative;
     top: -20px;
-    width: 100%;
-    background: #F4F6F8;
     max-width: 1110px;
     margin: auto;
 }
