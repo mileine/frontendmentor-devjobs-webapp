@@ -4,7 +4,7 @@
 
 ![image](./preview.jpg)
 
-[View challenge description here](https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l/hub/github-jobs-api-YWchkJ-qN)
+[View challenge description here](https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l)
 
 
 
