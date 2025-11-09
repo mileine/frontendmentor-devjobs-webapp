@@ -1,35 +1,185 @@
-# Dev Jobs Web App 
+# Devjobs Web App
 
-## A challenge by [Frontend Mentor](https://www.frontendmentor.io).
+A modern job board application built with Next.js, React, TypeScript, and Tailwind CSS.
+
+## A challenge by [Frontend Mentor](https://www.frontendmentor.io)
 
 ![image](./preview.jpg)
 
 [View challenge description here](https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l)
 
+## 🔄 Migration Story
 
+This project was **completely refactored from Angular to Next.js** using GitHub Copilot's code assistant capabilities. The original Angular 12 application was modernized to use the latest web technologies while maintaining all functionality and improving performance.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+### What Changed:
+- ✅ **Angular 12** → **Next.js 14** with App Router
+- ✅ **RxJS Observables** → **React Hooks & Context API**
+- ✅ **Angular Components** → **React Server & Client Components**
+- ✅ **SCSS Modules** → **Tailwind CSS 3**
+- ✅ **Angular Router** → **Next.js File-based Routing**
+- ✅ **TypeScript 4.2** → **TypeScript 5.6**
+- ✅ **Node 12** → **Node 22**
 
-## Development server
+### Migration Process:
+The refactoring was completed with AI assistance, automating:
+- Project structure reorganization
+- Component conversion from Angular to React
+- State management migration from RxJS to React Context
+- Styling conversion from SCSS to Tailwind CSS
+- Routing implementation using Next.js conventions
+- Image optimization and asset management
+- TypeScript interface modernization
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- 🌓 **Dark/Light Mode** - Toggle between themes with persistent localStorage preference
+- 📱 **Responsive Design** - Mobile, tablet, and desktop optimized layouts
+- 🔍 **Job Search** - Filter jobs by title, location, and contract type
+- 💼 **Job Listings** - Browse available developer positions with pagination
+- 📄 **Job Details** - View complete job descriptions with requirements and responsibilities
+- ⚡ **Fast Performance** - Built with Next.js 14 for optimal speed and SEO
+- 🎨 **Modern UI** - Clean, professional design with Tailwind CSS
+- ♿ **Accessible** - ARIA labels and semantic HTML throughout
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tech Stack
 
-## Build
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript 5.6
+- **Styling:** Tailwind CSS 3.4
+- **UI Library:** React 18.3
+- **Font:** Kumbh Sans (Google Fonts)
+- **Node Version:** 22+ (compatible with 20+)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js 22+ (or 20+)
+- npm or yarn
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Install dependencies
+```bash
+npm install
+```
 
-## Further help
+2. Run the development server
+```bash
+npm run dev
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Available Scripts
+
+- `npm run dev` - Start development server (port 3000)
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout with theme provider
+│   ├── page.tsx           # Home page
+│   ├── globals.css        # Global styles & Tailwind imports
+│   └── jobs/[id]/         # Dynamic job details pages
+│       └── page.tsx       # Job detail page
+├── components/            # React components
+│   ├── Header.tsx         # Header with theme toggle
+│   ├── SearchBar.tsx      # Job search filters
+│   ├── JobCard.tsx        # Job listing card
+│   ├── JobsContainer.tsx  # Job grid with load more
+│   ├── JobDetailsHeader.tsx   # Company info header
+│   ├── JobDetailsContent.tsx  # Job description & details
+│   ├── JobDetailsFooter.tsx   # Apply button footer
+│   ├── ThemeProvider.tsx  # Dark/light mode context
+│   └── ClientLayout.tsx   # Client-side layout wrapper
+├── data/                  # JSON data
+│   └── data.json         # Job listings data (15 jobs)
+├── types/                 # TypeScript definitions
+│   └── job.ts            # Job, Requirements, Role interfaces
+├── public/               # Static assets
+│   └── assets/           # Images, logos, and icons
+│       ├── desktop/      # Desktop assets & header backgrounds
+│       ├── tablet/       # Tablet assets
+│       ├── mobile/       # Mobile assets
+│       └── logos/        # Company logos (SVG)
+├── design/               # Design reference files
+├── tailwind.config.ts    # Tailwind configuration
+├── tsconfig.json         # TypeScript configuration
+├── next.config.js        # Next.js configuration
+└── package.json          # Dependencies & scripts
+```
+
+## Key Implementation Details
+
+### Theme Management
+- Uses React Context API for global theme state
+- Persists preference in `localStorage`
+- Handles SSR/hydration with client-side mounting
+- Smooth transitions between light and dark modes
+
+### Image Optimization
+- Company logos loaded from `/public/assets/logos/`
+- Paths normalized from `./assets/` to `/assets/`
+- Next.js Image component with unoptimized SVGs
+- Responsive background images for header
+
+### Responsive Design
+The application uses Tailwind's responsive utilities:
+- Mobile-first approach
+- Breakpoints: `md:` (768px), `lg:` (1024px)
+- Flexible grid layouts (1/2/3 columns)
+- Adaptive typography and spacing
+
+## Responsive Breakpoints
+
+- **Mobile:** < 768px (single column)
+- **Tablet:** 768px - 1023px (2 columns)
+- **Desktop:** ≥ 1024px (3 columns)
+
+## Color Palette
+
+### Light Mode
+- Background: `hsl(210, 22%, 96%)` - Light grey
+- Cards: `hsl(0, 0%, 100%)` - White
+- Text: `hsl(219, 29%, 14%)` - Very dark blue
+
+### Dark Mode
+- Background: `hsl(220, 29%, 10%)` - Midnight
+- Cards: `hsl(219, 29%, 14%)` - Very dark blue
+- Text: `hsl(0, 0%, 100%)` - White
+
+### Accent Colors
+- Violet: `hsl(235, 69%, 61%)` - Primary CTA
+- Light Violet: `hsl(235, 82%, 77%)` - Hover state
+- Dark Grey: `hsl(214, 17%, 51%)` - Secondary text
+- Grey: `hsl(212, 23%, 69%)` - Tertiary text
+
+## Design Reference
+
+Design files are located in the `/design` folder showing:
+- Mobile layouts (375px width)
+- Tablet layouts (768px width)
+- Desktop layouts (1440px width)
+- Dark and light mode variants for all screens
+- Home page and job details page examples
+
+## Known Fixes Applied
+
+1. **Theme Provider SSR Issue** - Fixed by providing default theme during server-side rendering
+2. **Image Path Resolution** - Normalized logo paths from `./assets/` to `/assets/`
+3. **Toggle Icons Display** - Corrected SVG paths for sun and moon icons
+4. **Hydration Warnings** - Implemented mounted state check in Header component
+
+## License
+
+This project is a Frontend Mentor challenge solution. Feel free to use it for learning purposes.
+
+---
+
+**Built with ❤️ using GitHub Copilot** - Refactored from Angular to modern Next.js stack
