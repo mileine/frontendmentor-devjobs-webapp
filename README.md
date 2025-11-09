@@ -34,13 +34,15 @@ The refactoring was completed with AI assistance, automating:
 ## Features
 
 - 🌓 **Dark/Light Mode** - Toggle between themes with persistent localStorage preference
-- 📱 **Responsive Design** - Mobile, tablet, and desktop optimized layouts
-- 🔍 **Job Search** - Filter jobs by title, location, and contract type
-- 💼 **Job Listings** - Browse available developer positions with pagination
+- 📱 **Responsive Design** - Mobile, tablet (including iPad Pro), and desktop optimized layouts
+- 🔍 **Advanced Search** - Filter jobs by title, company, expertise, location, and contract type
+- 🎯 **Mobile-First Search** - Compact search bar with modal filters on mobile devices
+- 💼 **Job Listings** - Browse available developer positions with pagination (12 per page)
 - 📄 **Job Details** - View complete job descriptions with requirements and responsibilities
 - ⚡ **Fast Performance** - Built with Next.js 14 for optimal speed and SEO
 - 🎨 **Modern UI** - Clean, professional design with Tailwind CSS
 - ♿ **Accessible** - ARIA labels and semantic HTML throughout
+- 🔗 **Navigation** - Clickable logo returns to home page
 
 ## Tech Stack
 
@@ -130,17 +132,21 @@ npm run dev
 - Responsive background images for header
 
 ### Responsive Design
-The application uses Tailwind's responsive utilities:
-- Mobile-first approach
-- Breakpoints: `md:` (768px), `lg:` (1024px)
+The application uses Tailwind's responsive utilities with custom breakpoints:
+- Mobile-first approach with progressive enhancement
+- Breakpoints: `md:` (768px), `lg:` (1367px), `xl:` (1440px)
 - Flexible grid layouts (1/2/3 columns)
 - Adaptive typography and spacing
+- iPad Pro included in tablet range
+- Rounded header corners on tablet/desktop only
+- Mobile search with modal filters
 
 ## Responsive Breakpoints
 
-- **Mobile:** < 768px (single column)
-- **Tablet:** 768px - 1023px (2 columns)
-- **Desktop:** ≥ 1024px (3 columns)
+- **Mobile:** < 768px (single column, no header rounded corners)
+- **Tablet:** 768px - 1366px (2 columns, includes iPad, iPad Air, iPad Pro 11" & 12.9")
+- **Desktop:** ≥ 1367px (3 columns, full desktop experience)
+- **Desktop XL:** ≥ 1440px (optimized for large screens)
 
 ## Color Palette
 
@@ -175,6 +181,12 @@ Design files are located in the `/design` folder showing:
 2. **Image Path Resolution** - Normalized logo paths from `./assets/` to `/assets/`
 3. **Toggle Icons Display** - Corrected SVG paths for sun and moon icons
 4. **Hydration Warnings** - Implemented mounted state check in Header component
+5. **Search Functionality** - Added filtering by title, company, expertise, location, and contract type
+6. **Mobile Search UX** - Implemented modal-based filters for mobile devices
+7. **Z-Index Layering** - Search bar and job details header properly stack above rounded header
+8. **Responsive Spacing** - Tablet spacing adjusted to 39px for better content balance
+9. **Header Corners** - Rounded bottom-left corner only on tablet and desktop
+10. **Breakpoint Optimization** - Custom breakpoints to include all iPad models in tablet range
 
 ## License
 

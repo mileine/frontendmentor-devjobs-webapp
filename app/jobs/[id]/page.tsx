@@ -18,8 +18,8 @@ export default function JobDetailsPage({ params }: JobDetailsPageProps) {
   }
 
   return (
-    <main className="min-h-screen pb-20">
-      <div className="container mx-auto px-6 md:px-10 lg:px-40">
+    <main className="min-h-screen pb-20 md:pb-24 bg-light-grey dark:bg-midnight">
+      <div className="container mx-auto px-6 md:px-[39px] lg:px-[165px] max-w-[1440px] -mt-[40px] md:-mt-[45px]">
         <JobDetailsHeader job={job} />
         <JobDetailsContent job={job} />
         <JobDetailsFooter job={job} />

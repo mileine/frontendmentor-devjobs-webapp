@@ -8,6 +8,13 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1367px",
+      xl: "1440px",
+      "2xl": "1536px",
+    },
     extend: {
       colors: {
         violet: "hsl(235, 69%, 61%)",
